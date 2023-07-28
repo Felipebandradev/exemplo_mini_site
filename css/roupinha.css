@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+
+/* seletor universal
+alterando o box model
+para todas as tags do html */
+*{ box-sizing: border-box;}
+/* regras css para o site de exemplo
+o que fizer aqui ira formatar todas as paginas HTML conectadas com este arquivo */
+
+body{
+    background-image: url(../imagens/tarde.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
+
+#acessorio{
+    background-color: rgba(255, 255, 255, 0.525);
+    width: 80%;  /* Largura */
+    margin: auto;
+    padding: 2%;
+    border-radius: 20px;
+    box-shadow: #101ff0 0 0 100px, rgb(216, 50, 105) 0 -10px 100px;
+    max-width: 1100px;
+    min-width: 600px;
+} 
+
+img{
+    /* tornando as imagens flexiveis/responsivas */
+    max-width: 100%;
+}
+
+h1{
+    /* obs: no caso de gradiente diagonal usa-se um valor numérico e a medida em graus(deg representa graus) */
+    background: 
+        radial-gradient( 
+            circle ,rgb(255, 255, 255), pink ,  violet, purple, rgb(0, 0, 0)); 
+    /* background: radial-gradient(ellipse at center, rgba(252,236,252,1) 0%,rgba(251,166,225,1) 50%,rgba(253,137,215,1) 51%,rgba(255,124,216,1) 100%); */
+    color:rgb(242, 238, 238);
+    text-align: center;
+    text-shadow: rgb(19, 16, 16) 1px 1px 5px;
+    font-family: 'nabla', cursive, Arial, Helvetica, sans-serif ;
+    font-size: 50px;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 5px;
+    box-shadow: black 2px 2px 10px;
+}
+
+h2{
+    background-image: url(../imagens/oriental-tiles.png);
+    color: whitesmoke;
+    padding: 10px;
+    /* border-left-width: 15px;
+    border-left-color: rgb(136, 108, 226) ;
+    border-left-style:solid ; */
+    border-left: 20px rgb(136, 108, 226) solid;
+
+    border-right-width: 25px;
+    border-right-color: rgb(136, 108, 226) ;
+    border-right-style:solid ;
+}  
+
+/* seletor classe sempre começa com . */
+
+.centralizar{    text-align: center;}
+.centralhome{    
+    text-align: center;
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+} 
+
+   
+
+.sombra-texto{ text-shadow: black 2px 2px 3px;}
+   
+.borda-aredondada{ border-radius: 8px;}
+
+.destaque{
+    background-color: violet;
+    padding: 1px 4px;
+    border: solid 2px blueviolet;
+}
+
+/*  bootstrap um site otimo para front-end */
+
+/* regras para o menu e seus links */
+
+nav{ text-align: center;}
+/* regra inicial */
+/* seletor DESCENDENTE */
+
+nav a{
+    color: rgb(0, 0, 0);
+   background-color: violet;
+   text-decoration: none;
+   font-weight: bold;
+   padding: 10px;
+   display: inline-block;
+   width: 33.33%;
+   border: solid blueviolet 2px;
+   box-shadow: black 2px 2px 10px;
+   transition: 0.5s;
+}  
+   
+
+/* regra de acionamento do link
+seletor DESCENDENTE+PSEUDO-CLASSE */
+
+nav a:hover, nav a:focus{
+    background-color:blueviolet;
+    color:rgb(255, 248, 248);
+    box-shadow: black 2px 2px 10px inset;
+    border: solid violet 2px;
+    transform: translateY(-10px);
+    transition: all 0.3s linear;
+}
+
+figure{
+    margin: 0 auto;
+    text-align: center;
+    
+    
+    position: relative;
+
+    max-width:  419px;
+}
+
+figcaption{
+    font-weight: bold;
+    background-color: rgba(255, 20, 145, 0.516);
+    width: 100%;
+    /* tornando o elemento 
+    livre para o posicionamento */
+    position: absolute;
+    text-shadow: black 2px 2px 3px;
+    color: rgb(246, 245, 246);
+    
+    /* coordenadas */
+    right: 0;
+    top: 0;
+    /* 
+    left: 60px;
+    bottom: 0;    
+    */
+}
+
+
+ figure {
+    filter: grayscale(100%);
+    transition: 0.5s;
+    cursor: pointer;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+} 
+
+ figure:hover {
+    filter:  none;
+    box-shadow: rgb(5, 5, 5) 2px 2px 10px;
+    transform: scale(1.5);
+    clip-path: none;
+} 
+
+/* https://css-tricks.com/almanac/properties/f/filter/ */
+
+
+.centralizar img{
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+
+img{
+    max-width: 100%;
+     /* border: solid 5px rgb(195, 112, 216);
+    box-shadow: rgb(7, 7, 7) 2px 2px 3px;  */
+}
+
+ul{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+ul li{
+    color: rgb(201, 83, 146);
+}
+
+ul li:first-child{
+    background-color: rgb(220, 20, 200);
+    color: aliceblue;
+}
+/* ul li:last-child{
+    background-color: rgb(220, 20, 200);
+    color: aliceblue; 
+}*/
+ul li:nth-child(4){
+    
+    color: aliceblue;
+}
+ ul li:nth-child(odd){
+    background-color: rgba(220, 20, 200, 0.601);
+    color: aliceblue;
+}    
+ul li:nth-child(even){
+    background-color: rgba(227, 89, 213, 0.591);
+    color: rgb(0, 0, 0);
+}     
+/* ul li:nth-child( 2n){
+    background-color: rgba(227, 89, 213, 0.591);
+} */
+
+/* pseudo classes
+:hover= so mouse
+:focus= teclado, dedo etc
+:nth-child()= variavel
+(odd)= impar linhas
+(even)=par linhas
+(numero+n)= acada quantida de linha vai usar esse elemento nesse caso à possibilidades de ter expressões numéricas
+:first-child= primeiro elemento
+:last-child= Ultimo elemento
+
+*/
+
+
+
+.flutuar{
+    float: left;
+    margin-right: 10px;
+}
+/* etapas
+1: regra de animação*/
+
+@keyframes animacores{
+    /* de: como inicia */
+    from{ color: rgb(255, 192, 203);
+    background-color: rgba(137, 43, 226, 0.559);}
+    /* para: como termina*/
+    to{ color: rgb(137, 43, 226);
+    background-color: rgba(255, 192, 203, 0.561);}
+}
+
+
+/*2: aplicar a animação em alguns elementos */
+
+.subtitulo , h3{
+    animation-name: animacores;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#banner{
+    width: 400px;
+    margin: auto;
+    border: solid 2px black; 
+    overflow: hidden;
+    height: 150px ;
+}
+
+@keyframes animabanner{
+    from{ 
+        transform: 
+            translateX(-128px);}
+
+    to{ 
+        transform: 
+            translateX(450px) 
+            rotate(360deg);}
+
+}
+
+#banner img{
+  animation-name: animabanner;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
+  position: relative;
+}
+
+@keyframes animacss{
+    from{
+        transform: scale(3.5) ;
+    }
+
+    to{
+        transform: scale(2);
+        background-color: rgba(165, 42, 42, 0.505);
+    }
+}
+
+aside p{
+    will-change: transform;
+    
+    background-color: rgba(0, 0, 255, 0.507);
+    /* animation-name: animacss;
+    animation-duration: 1s;    
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear; */
+    animation: animacss 1s infinite alternate linear;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    position: relative;
+    bottom: 90px;
+    width: 100%;
+}
+
+
